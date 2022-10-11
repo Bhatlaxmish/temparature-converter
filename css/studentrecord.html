@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- css style sheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+ 
+
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: rgba(228, 26, 26, 0.362);
+    }
+    /* header title */
+    .header-title{
+        text-align: center;
+        background-color:#1940db4e;
+        color: white;
+        padding:3px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    
+    .ete{
+        align-items: center;
+        text-align: center;
+    }
+    #stdlist{
+        padding-bottom: 3rem;
+        padding-right: 2rem;
+    }
+    .givepadding{
+        padding-top:2rem;
+    }
+    
+    .sidebar-list{
+    list-style: none;
+    }
+    .sidebar-list a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    line-height: 2;
+    }
+    .sidebar-list a:hover{
+    background-color: #0a0b0e2d;
+    padding-left:15px;
+    /* transition: ease-in-out; */
+    }
+    .sidebar{
+        margin-top:-20px;
+        position: fixed;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #1B2430;
+    transition: 0.5s;
+    }
+    
+    /* toggler */
+    #check{
+        display: none;
+    }
+    label #btn{
+        position: absolute;
+        cursor:pointer;
+        transition: all 0.5s ease-in-out;
+    }
+    label #btn{
+        left: 50px;
+        top: 25px;
+    
+    }
+    #check:checked~ .sidebar{
+        left: 0;
+    }
+    #check:checked~ label #btn{
+        left: 250px;
+    
+    }
+    
+    /* year */
+    #year{
+        margin:-25px 0 0 330px;
+        padding: 10px 50px;
+    }
+    #std-detail{
+        text-align: center;
+        margin:5rem;
+        margin-bottom: 0;
+        width: 86%;
+        padding: 5px;
+        background-color: rgb(42, 242, 159);
+    }
+    #std-detail h2{
+        border-bottom:1px solid #774138;
+        padding-bottom: 15px;
+    }
+    /* #home
+    {
+        margin-left: 330px;
+        padding: 7px;
+        color: aqua;
+    } */
+    
+    /* form */
+    
+    .content{
+        margin:5rem;
+        margin-top: 0;
+        background-color: rgb(181, 241, 242);
+    }
+    form{
+        padding: 10px;
+    }
+    .row1{
+        margin-bottom: 15px;
+    }
+    .row2{
+        margin-bottom: 15px;
+    }
+     select {
+        font-weight:lighter;
+    width: 400px ;
+    margin: 5px;
+    background-color: rgb(226, 194, 194);
+    border: 0.3rem solid #f7ecde;
+    
+    }
+    #srs{
+        /* margin-left: 330px; */
+        background-color: #a8c4e8;
+        text-align: center;
+        color: white;
+        padding: 2px;
+    }
+    
+    /* table */
+    table{
+        width: 99%;
+        margin: 5px;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    table th{
+        color:#1d2887;
+        border: 1px solid #f7ecde;
+        padding: 6px;
+    }
+    
+    table tr{
+        border: 1px solid #b1d62c;
+        padding: 5px;
+    }
+    table select{
+        width:120px;
+        font-weight: 600;
+    }
+    table td{
+        border: 1px solid #a8672e;
+    }
+</style>
+<body>
+    <!-- toggler -->
+    <div class="container">
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i id="btn" class="fa fa-bars" style="font-size :20px"></i>
+        </label>
+        <!-- header -->
+        <div class="sidebar">
+            <header class="header-title">
+                <p>Management</p>
+            </header>
+    <ul class="sidebar-list">
+        <li><a href="#">master</a></li>
+        <li><a href="#">Transaction</a></li>
+        <li><a href="#">Enquiry</a></li>
+        <li><a href="#">Student detail</a></li>
+        <li><a href="#">Admission Reciept</a></li>
+        <li><a href="#">Pre Admission Reciept</a></li>
+        <li><a href="#">Student result</a></li>
+        <li><a href="#">Report</a></li>
+    </ul>
+        </div>
+    
+        <!-- year -->
+        <div class="ite">
+           
+       <div id="std-detail">
+        <h2 class="" id="">Student Result Status</h2>
+        <h6 class="" id="home">Home - Student result status</h6>
+       </div>
+        </div>
+    
+        <!-- student result status -->
+        <div class="content">
+            <h5 id="srs">Student Result Status</h5>
+            <form class="fomr" action="#">
+          <div class="row1 row">
+           <div class="col-md-6">
+            University
+            <select class="drop-list" name="University" id="university">
+                <option value="MSBTE1">MSBTE1</option>
+                <option value="MSBTE2">MSBTE2</option>
+            </select>
+           </div>
+    
+           <div class="col-md-6">
+           NAME
+            <input type="text" name="username" id="username">
+               
+            </select>
+           </div>
+    
+    
+    
+           <div class="col-md-6">
+            Course
+            <select class="drop-list" name="Course" id="course">
+                <option value="MSBTE1">ADMLT-LX1</option>
+                <option value="MSBTE2">ADMLT-LX2</option>
+            </select>
+           </div>
+          </div>
+            <div class="row2 row">
+       
+           <div class="col-lg-6">
+            Batch
+            <select class="drop-list" name="Batch" id="batch">
+                <option value="MSBTE1">Regular-batch</option>
+                <option value="MSBTE2">MSBTE2</option>
+            </select>
+           </div>
+           <div class="col-lg-6">
+           Report type
+           <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">RESULT</label>
+          </div>
+          
+        
+           </div>
+           <div class="givepadding">
+            <button type="button" class="btn btn-primary" id="submit"  onclick="onFormSubmit()" >submit</button>
+           </div>
+    
+            </div>
+            </form>
+            <table id="stdlist">
+                <tr>
+                    <th>University</th>
+                    <th>COURSE</th>
+                    <th>BATCH</th>
+                   
+                    <th>STUDENT</th>
+                    <th>RESULT</th>
+                    <th>STATUS</th>
+                    
+                </tr>
+               
+    
+                
+    
+             
+    
+              
+    
+                
+             
+    
+                <tr>
+                    <td>MSBTE</td>
+                    <td>ADMLT-LK</td>
+                    <td>ADMLT-LX</td>
+                  
+                    <td>Venugopal Acharya</td>
+                    <td>
+                    First class
+                    </td>
+                    <td>
+                        pass
+                    </td>
+                    <td>
+                        default
+                    </td>
+                </tr>
+                <tbody>
+                </tbody>
+    
+            </table>
+        </div>
+    </div>
+   
+</body>
+<script>
+
+var selectedRow = null
+
+function onFormSubmit() {
+
+    // if (validate()) {
+
+        var formData = readFormData();
+
+        if (selectedRow == null) {
+
+            insertNewRecord(formData);
+        }
+        else {
+
+            updateRecord(formData);
+        }
+
+        resetForm();
+    // }
+}
+
+function readFormData() {
+    var formData = {};
+    formData["university"] = document.getElementById("university").value;
+    formData["username"] = document.getElementById("username").value;
+
+    formData["course"] = document.getElementById("course").value;
+    formData["batch"] = document.getElementById("batch").value;
+   formData["pass"]="pass";
+   formData["result"]="First Class";
+
+
+    return formData;
+}
+
+function insertNewRecord(data) {
+    var table = document.getElementById("stdlist").getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.length);
+    cell1 = newRow.insertCell(0);
+    cell1.innerHTML = data.university;
+    cell2 = newRow.insertCell(1);
+    cell2.innerHTML = data.course;
+    cell3 = newRow.insertCell(2);
+    cell3.innerHTML = data.batch;
+    cell4 = newRow.insertCell(3);
+    cell4.innerHTML = data.username;
+    cell4 = newRow.insertCell(4);
+    cell4.innerHTML = data.result;
+    cell4 = newRow.insertCell(5);
+    cell4.innerHTML = data.pass;
+    cell5 = newRow.insertCell(6);
+    cell5.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+<a onClick="onDelete(this)">Delete</a>`;
+}
+function resetForm() {
+    document.getElementById("university").value = "";
+    document.getElementById("course").value = "";
+    document.getElementById("batch").value = "";
+    document.getElementById("username").value = "";
+   
+    selectedRow = null;
+}
+function onEdit(td) {
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById("university").value = selectedRow.cells[0].innerHTML;
+    document.getElementById("course").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("batch").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("username").value = selectedRow.cells[3].innerHTML;
+    
+}
+function updateRecord(formData) {
+    selectedRow.cells[0].innerHTML = formData.university;
+    selectedRow.cells[1].innerHTML = formData.course;
+    selectedRow.cells[2].innerHTML = formData.batch;
+    selectedRow.cells[3].innerHTML = formData.username;
+
+}
+function onDelete(td) {
+    if (confirm('Are you sure to delete this record ?')) {
+        row = td.parentElement.parentElement;
+        document.getElementById("stdlist").deleteRow(row.rowIndex);
+        resetForm();
+    }
+}
+
+
+</script>
+
+</html>

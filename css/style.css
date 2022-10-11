@@ -1,0 +1,98 @@
+body {
+  height:100%;
+  width:100%;
+  padding: 2rem 1rem;
+  overflow-x: hidden;
+  background: rgb(161 109 186);
+  font: 700 1.2rem "Jura", sans-serif;
+ 
+
+}
+
+.converter {
+  background-color: #f0d1f5de;
+  margin-bottom: 2rem;
+  padding: 1.3rem 2rem 2rem;
+  border: 0.1rem solid #808080;
+}
+
+input {
+  padding: 0.2rem;
+  font-size: 1.1rem;
+  outline: none;
+  border-radius: 0.1rem;
+  width: 20rem;
+  text-indent: 0.2rem;
+  background-color: #fdfdfd;
+}
+
+input:focus {
+  background-color: #f1f1f1;
+}
+
+
+
+
+
+#loadingDiv {
+  top: 0;
+  left: 0;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #535353;
+}
+
+.loader {
+  width: 3.6rem;
+  height: 3.6rem;
+  background: center / contain no-repeat url(../img/loader.gif);
+}
+
+::selection {
+  color: #fdfdfd;
+  background-color: #444;
+}
+
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+.nr{
+  background-color: red;
+}
+.right{
+  float:right;
+}
+
+    
+    .imageination{
+      padding-top:1rem;
+    display:flex;
+
+    }
+   .imagiination{
+padding-top:1rem;
+    }
+    .less{
+
+   
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+    }
